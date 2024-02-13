@@ -1,4 +1,4 @@
-local Owner = "IDontUseAura9"
+local Owner = "riggedgamer5021"
 
 local LocalPlayer = game.Players.LocalPlayer
 
@@ -13,7 +13,7 @@ local HttpService = game:GetService("HttpService")
 local RunService = game:GetService("RunService")
 local WorkSpace = game:GetService("Workspace") or game.Workspace
 
-local GodSploit = Instance.new("ScreenGui")
+local forty = Instance.new("ScreenGui")
 local ContainerFrame = Instance.new("Frame")
 local ContainerFrameUIListLayout = Instance.new("UIListLayout")
 local NotificationContainer = Instance.new("Frame")
@@ -21,13 +21,13 @@ local NotificationContainerUIListLayout = Instance.new("UIListLayout")
 
 local DefaultLayoutOrder = 0
 
-GodSploit.Name = "GodSploit"
-GodSploit.Parent = LocalPlayer:WaitForChild("PlayerGui")
-GodSploit.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-GodSploit.ResetOnSpawn = false
+Forty.Name = "Forty"
+Forty.Parent = LocalPlayer:WaitForChild("PlayerGui")
+Forty.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Forty.ResetOnSpawn = false
 
 ContainerFrame.Name = "ContainerFrame"
-ContainerFrame.Parent = GodSploit
+ContainerFrame.Parent = Forty v40
 ContainerFrame.BackgroundColor3 = Color3.new(255, 255, 255)
 ContainerFrame.BackgroundTransparency = 1.000
 ContainerFrame.BorderColor3 = Color3.new(0, 0, 0)
@@ -43,8 +43,8 @@ ContainerFrameUIListLayout.FillDirection = Enum.FillDirection.Horizontal
 ContainerFrameUIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 
 NotificationContainer.Name = "NotificationContainer"
-NotificationContainer.Parent = GodSploit
-NotificationContainer.BackgroundColor3 = Color3.new(255, 255, 255)
+NotificationContainer.Parent = Forty
+NotificationContainer.BackgroundColor3 = Color3.new(27, 0, 0)
 NotificationContainer.BackgroundTransparency = 1.000
 NotificationContainer.BorderColor3 = Color3.new(0, 0, 0)
 NotificationContainer.BorderSizePixel = 0
@@ -68,7 +68,7 @@ UIStroke.Thickness = 2
 UIStroke.Color = Color3.new(1, 0.666667, 0)
 
 Open.Name = "Open"
-Open.Parent = GodSploit
+Open.Parent = Forty
 Open.BackgroundColor3 = Color3.new(255, 255, 255)
 Open.BorderColor3 = Color3.new(0, 0, 0)
 Open.BorderSizePixel = 0
@@ -1436,27 +1436,27 @@ local function AutoToxic(Player)
 	local KillMessage = ""					
 
 	if Randomized == 0 then
-		KillMessage = "You are so bad u died. L" .. Player.Name .. " | GodSploit on top"
+		KillMessage = "You are so bad u died. L" .. Player.Name .. " | Jump off"
 	end
 
 	if Randomized ~= 0 then
-		KillMessage = "I could probably win without cheats. L" .. Player.Name .. " | GodSploit on top"
+		KillMessage = "I could probably win without cheats. L" .. Player.Name .. " | Jump off"
 	end
 
 	if Randomized == 2 then
-		KillMessage = "Clowns are the only ones we kill. L" .. Player.Name .. " | GodSploit on top"
+		KillMessage = "Clowns are the only ones we kill. L" .. Player.Name .. " | Jump off"
 	end
 
 	if Randomized == 3 then
-		KillMessage = "Rats. Imagine dying in a block game. L" .. Player.Name .. " | GodSploit on top"
+		KillMessage = "Rats. Imagine dying in a block game. L" .. Player.Name .. " |  on top"
 	end
 
 	if Randomized == 4 then
-		KillMessage = "I hack for fun. Too bad your fun is ruined. L" .. Player.Name .. " | GodSploit on top"
+		KillMessage = "I hack for fun. Too bad your fun is ruined. L" .. Player.Name .. " | Jump off"
 	end
 
 	if Randomized == 5 then
-		KillMessage = "I ruined a good day for a good reason. L" .. Player.Name .. " | GodSploit on top"
+		KillMessage = "I ruined a good day for a good reason. L" .. Player.Name .. " | Jump off"
 	end
 
 	SendChatMessage(KillMessage)
@@ -1504,11 +1504,11 @@ local function ChatSpam()
 	local KillMessage = ""
 
 	if Randomized == 0 then
-		KillMessage = "GodSploit does more updates than Bedwars 💀. | GodSploit On Top"
+		KillMessage = "Forty does more updates than Bedwars 💀. | ."
 	end
 
 	if Randomized ~= 0 then
-		KillMessage = "SkidB4 is as bad as how you felt when your dad left you. | GodSploit On Top"
+		KillMessage = "SkidB4 is as bad as how you felt when your dad left you. | "
 	end
 
 	if Randomized == 2 then
@@ -2112,8 +2112,8 @@ local function FlyMe()
 			repeat
 				task.wait()
 
-				if tick() - FlyGroundTime <= 2.3 then
-					local MaxFlyTime = 2.3
+				if tick() - FlyGroundTime <= 100 then
+					local MaxFlyTime = 100
 					local FlyTime = DecimalRound(tick() - FlyGroundTime, 1)
 
 					NumberDisplay.Text = FlyTime		
@@ -2784,7 +2784,7 @@ task.spawn(function()
 end)
 
 task.spawn(function()
-	local KillAura, DropDownButton, LayoutOrder, UIGradient = CreateToggle(CombatTab, "KillAura", Settings.KillAura.Value, function(CallBack)
+	local Aura, DropDownButton, LayoutOrder, UIGradient = CreateToggle(CombatTab, "Aura", Settings.Aura.Value, function(CallBack)
 		Settings.KillAura.Value = CallBack
 	end)
 
@@ -2810,14 +2810,14 @@ task.spawn(function()
 	task.spawn(function()
 		UserInputService.InputBegan:Connect(function(Input)
 			if not UserInputService:GetFocusedTextBox() then
-				if Input.KeyCode.Name == Settings.KillAura.KeyBind then
-					Settings.KillAura.Value = not Settings.KillAura.Value
+				if Input.KeyCode.Name == Settings.AuraAura.KeyBind then
+					Settings.Aura.Value = not Settings.Aura.Value
 
-					if Settings.KillAura.Value == true then
+					if Settings.Aura.Value == true then
 						UIGradient.Color =  ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.new(1, 0.666667, 0)), ColorSequenceKeypoint.new(1.00, Color3.new(1, 0.803922, 0.411765))}
 					end
 
-					if Settings.KillAura.Value == false then
+					if Settings.Aura.Value == false then
 						UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.new(1, 1, 1)), ColorSequenceKeypoint.new(1.00, Color3.new(1, 1, 1))}
 					end
 				end
@@ -2833,8 +2833,8 @@ task.spawn(function()
 			Value = not Value
 
 			if Value == true then
-				InstanceUI = CreateMiniToggle(CombatTab, "CustomAnimation", Settings.KillAura.CustomAnimation, LayoutOrder + 2, function(CallBack)
-					Settings.KillAura.CustomAnimation = CallBack
+				InstanceUI = CreateMiniToggle(CombatTab, "CustomAnimation", Settings.Aura.CustomAnimation, LayoutOrder + 2, function(CallBack)
+					Settings.Aura.CustomAnimation = CallBack
 				end)
 			end
 
